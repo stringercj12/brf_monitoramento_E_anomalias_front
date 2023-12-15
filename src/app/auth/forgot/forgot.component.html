@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="toLogin()">
+
+  @if (sentWithSuccess) {
+
+    <p class="result">
+      <app-icon icon="check-circle" class="icon-check"/>
+      Um link para redefinir sua senha foi enviado para <strong>{{ form?.get('email')?.value }}</strong>
+    </p>
+  } @else {
+
+    <h5>
+      Esqueceu a senha?
+    </h5>
+
+    <p>
+      Insira o endereço de e-mail associado à sua conta <br/>
+      que lhe enviaremos um link de redefinição de senha.
+    </p>
+  }
+  @if (!sentWithSuccess) {
+    <div class="input-group-icon">
+      <label for="email">Seu e-mail</label>
+      <app-icon icon="email-action-unread" class="icon"/>
+      <input type="text" class="input-icon" id="email" placeholder="Ex: seunome@brf.com" formControlName="email"
+             [ngClass]="{'is-invalid': form?.get('password')?.errors && form?.get('password')?.touched}"/>
+      <small class="invalid-feedback">
+        <app-icon icon="road-sign-warning" class=""/>
+        Mensagem de erro!
+      </small>
+    </div>
+
+    <button type="submit" class="btn btn-flex btn-primary" [disabled]="form.invalid">
+    <span class="font-semibold">
+      Enviar link de redefinição
+    </span>
+      @if (loading) {
+        <app-loading></app-loading>
+      }
+    </button>
+  }
+  <a routerLink="../login" class="back">
+    Voltar para login
+  </a>
+
+</form>

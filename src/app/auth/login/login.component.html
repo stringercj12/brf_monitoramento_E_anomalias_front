@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="toLogin()">
+
+  <div class="input-group-icon">
+    <label for="email">Seu e-mail</label>
+    <app-icon icon="email-action-unread" class="icon"/>
+    <input type="text" class="input-icon" id="email" placeholder="Ex: seunome@brf.com" formControlName="email"
+           [ngClass]="{'is-invalid': form?.get('password')?.errors && form?.get('password')?.touched}"/>
+    <small class="invalid-feedback">
+      <app-icon icon="road-sign-warning" class=""/>
+      Mensagem de erro!
+    </small>
+  </div>
+  <div class="input-group-icon">
+    <label for="password">Senha</label>
+    <app-icon icon="lock-password" class="icon"/>
+    <input type="text" class="input-icon" id="password" placeholder="Digite sua senha" formControlName="password"
+           [ngClass]="{'is-invalid': form?.get('password')?.errors && form?.get('password')?.touched}"/>
+    <small class="invalid-feedback">
+      <app-icon icon="road-sign-warning" class=""/>
+      Mensagem de erro!
+    </small>
+  </div>
+
+
+  <div class="input-check">
+    <input type="checkbox" id="check"/>
+    <label for="check">Mantenha-me conectado</label>
+  </div>
+
+  <button type="submit" class="btn btn-flex btn-primary" [disabled]="form.invalid">
+    <span class="font-semibold">
+      Entrar
+    </span>
+    @if (loading) {
+      <app-loading></app-loading>
+    }
+  </button>
+
+  <a routerLink="../forgot" class="forgot">
+    Esqueceu sua senha?
+  </a>
+</form>

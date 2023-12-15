@@ -29,6 +29,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/core/themes/"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],
@@ -68,6 +73,9 @@
               "buildTarget": "brf_monitoramento_E_anomalias:build:development"
             }
           },
+          "options": {
+
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -89,6 +97,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/core/themes/"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],

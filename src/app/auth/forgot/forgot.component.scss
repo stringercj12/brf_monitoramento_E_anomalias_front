@@ -1,0 +1,47 @@
+@import "themes";
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: $gray-700;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 32px;
+  color: $gray-700;
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  app-icon {
+    stroke: $success-500;
+    margin-bottom: 16px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.back {
+  font-size: 14px;
+  font-weight: 700;
+  color: $primary-400;
+  display: inline-block;
+  margin-block: 32px;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: 1px solid $primary-400;
+  }
+}

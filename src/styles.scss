@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'ProximaNova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
-@import "../src/core/themes/fonts";
-@import "../src/core/themes/colors";
+
+@import "app/core/themes/fonts";
+@import "app/core/themes/colors";
+@import "app/core/themes/inputs";
+@import "app/core/themes/buttons";
