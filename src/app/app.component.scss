@@ -1,0 +1,60 @@
+main {
+  background-image: url("/assets/images/background-login.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    max-width: 510px;
+    max-height: 424px;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 100px;
+    gap: 16px;
+
+    background: #ffffff;
+    box-shadow: 0px 2px 80px rgba(37, 38, 49, 0.05);
+
+    .logo-container {
+      .logo {
+        width: 122px;
+        height: 58px;
+      }
+    }
+  }
+}
+
+.input-group-icon {
+  position: relative;
+  label {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #454d54;
+  }
+  .input-icon {
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    width: 100%;
+    padding: 14px;
+    padding-left: 56px;
+
+    + .icon {
+      position: absolute;
+      left: 10px;
+      top: 28px;
+    }
+  }
+}
