@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {AuthComponent} from "./auth.component";
 import {LoginComponent} from "./login/login.component";
 import {ForgotComponent} from "./forgot/forgot.component";
+import {CreatePasswordComponent} from "./create-password/create-password.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: "forgot",
         component: ForgotComponent
+      },
+      {
+        path: "create_password/:token",
+        component: CreatePasswordComponent
       }
     ]
   }

@@ -4,7 +4,7 @@
 
     <p class="result">
       <app-icon icon="check-circle" class="icon-check"/>
-      Um link para redefinir sua senha foi enviado para <strong>{{ form?.get('email')?.value }}</strong>
+      Um link para redefinir sua senha foi enviado para <strong>{{ form.get('email')?.value }}</strong>
     </p>
   } @else {
 
@@ -22,7 +22,7 @@
       <label for="email">Seu e-mail</label>
       <app-icon icon="email-action-unread" class="icon"/>
       <input type="text" class="input-icon" id="email" placeholder="Ex: seunome@brf.com" formControlName="email"
-             [ngClass]="{'is-invalid': form?.get('password')?.errors && form?.get('password')?.touched}"/>
+             [ngClass]="{'is-invalid': form.get('password')?.errors && form.get('password')?.touched}"/>
       <small class="invalid-feedback">
         <app-icon icon="road-sign-warning" class=""/>
         Mensagem de erro!
