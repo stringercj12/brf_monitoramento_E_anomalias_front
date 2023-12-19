@@ -1,0 +1,34 @@
+<header>
+  <div class="logo-container">
+    <button class="btn-menu">
+      <app-icon icon="menu" class="icon"/>
+    </button>
+    <span class="line"></span>
+    <img src="/assets/images/logo-monocromatic.png" alt="Logo da aplicação na cor branca"/>
+  </div>
+
+  <nav>
+    <div>
+      <div class="search">
+        <app-icon icon="search" class="icon"/>
+        <input type="text" class="input-icon" id="search" placeholder="Procure por anomalias, viagens, etc"
+               formControlName="search"/>
+        <app-icon icon="arrow-down" class="icon"/>
+      </div>
+    </div>
+    <div class="nav-items">
+      <div>
+        <app-icon icon="chat1" class="notification"/>
+      </div>
+      <div class="user">
+        <img
+          src="https://api.dicebear.com/7.x/initials/svg?seed={{nome}}&radius=50&backgroundColor=ffffff&textColor=41348C&size=32&fontWeight=700"
+          alt="Foto do usuario"/>
+        <span>
+          Eitor Roberto
+        </span>
+        <app-icon icon="arrow-down"/>
+      </div>
+    </div>
+  </nav>
+</header>

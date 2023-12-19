@@ -5,7 +5,7 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {DomSanitizer} from "@angular/platform-browser";
 import {IconComponent} from "../../core/shared/components/icon/icon.component";
 import {CommonModule} from "@angular/common";
-import {RouterModule} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -18,14 +18,15 @@ import {RouterModule} from "@angular/router";
 export class LoginComponent {
 
   form: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required])
+    email: new FormControl('example@brf.com', [Validators.required, Validators.email]),
+    password: new FormControl('123456', [Validators.required])
   });
   loading: boolean = false;
 
   constructor(
     private authService: AuthService,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private router: Router
   ) {
   }
 
@@ -42,6 +43,7 @@ export class LoginComponent {
       next: (e: any) => {
         console.log(e)
         this.loading = false;
+        this.router.navigate(['dashboard','monitoring'])
       },
       error: () => {
         this.loading = false;

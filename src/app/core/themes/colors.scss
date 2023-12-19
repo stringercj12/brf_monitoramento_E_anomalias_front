@@ -64,3 +64,13 @@ $gray-500: #b8bac2; // base
 $gray-400: #eef0f3;
 $gray-300: #f6f7f9;
 $white: #ffffff;
+
+
+// Gradient
+
+$purple-500: #41348C;
+$purple-400: #2D348D;
+$purple-300: #84328A;
+$gradient-header: linear-gradient(270deg, $purple-400 0%, $purple-300 100%);
+
+
