@@ -1,6 +1,6 @@
 <header>
   <div class="logo-container">
-    <button class="btn-menu">
+    <button class="btn-menu" (click)="toggleSidebar()">
       <app-icon icon="menu" class="icon"/>
     </button>
     <span class="line"></span>
@@ -11,8 +11,7 @@
     <div>
       <div class="search">
         <app-icon icon="search" class="icon"/>
-        <input type="text" class="input-icon" id="search" placeholder="Procure por anomalias, viagens, etc"
-               formControlName="search"/>
+        <input type="text" class="input-icon" id="search" placeholder="Procure por anomalias, viagens, etc"/>
         <app-icon icon="arrow-down" class="icon"/>
       </div>
     </div>

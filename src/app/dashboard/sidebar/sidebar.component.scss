@@ -1,0 +1,44 @@
+@import "themes";
+
+section {
+  max-width: 100%;
+  min-width: 64px;
+  height: 100%;
+  background: #FFFFFF;
+
+  &.show {
+    width: 241px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    .nav-itens {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-left: 4px solid transparent;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        border-left-color: $primary-500;
+        background-color: $primary-200;
+        color: $primary-500;
+      }
+
+      .icon {
+
+      }
+
+      .text {
+        font-size: 14px;
+        color: $gray-700;
+        font-weight: 400;
+        display: none;
+      }
+    }
+  }
+}

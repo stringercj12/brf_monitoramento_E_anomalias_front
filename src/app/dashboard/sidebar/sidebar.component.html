@@ -1,1 +1,21 @@
-<p>sidebar works!</p>
+<section [ngClass]="{'show': sidebarActive}">
+  <nav>
+    <div class="nav-itens">
+      <div class="icon">
+        <app-icon icon="home"/>
+      </div>
+      <div class="text">
+        Home / {{sidebarActive}}
+      </div>
+    </div>
+    <div class="nav-itens">
+      <div class="icon">
+        <app-icon icon="monitoramento"/>
+      </div>
+      <div class="text">
+        Monitoramento / {{sidebarActive}}
+      </div>
+    </div>
+  </nav>
+</section>
+
