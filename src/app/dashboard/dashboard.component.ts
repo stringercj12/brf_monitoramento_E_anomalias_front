@@ -16,5 +16,5 @@ import {SidebarComponent} from "./sidebar/sidebar.component";
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-
+  sidebarActive = true;
 }

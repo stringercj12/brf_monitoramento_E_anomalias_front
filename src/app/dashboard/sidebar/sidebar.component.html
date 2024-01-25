@@ -1,19 +1,19 @@
 <section [ngClass]="{'show': sidebarActive}">
   <nav>
-    <div class="nav-itens">
+    <div class="nav-itens" routerLink="dashboard/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <div class="icon">
         <app-icon icon="home"/>
       </div>
       <div class="text">
-        Home / {{sidebarActive}}
+        Home
       </div>
     </div>
-    <div class="nav-itens">
+    <div class="nav-itens" routerLink="monitoring" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <div class="icon">
         <app-icon icon="monitoramento"/>
       </div>
       <div class="text">
-        Monitoramento / {{sidebarActive}}
+        Monitoramento
       </div>
     </div>
   </nav>

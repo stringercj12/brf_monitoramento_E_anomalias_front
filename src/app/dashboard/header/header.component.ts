@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Output} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {IconComponent} from "../../core/shared/components/icon/icon.component";
 import {RouterLink, RouterLinkActive} from "@angular/router";
@@ -25,6 +25,7 @@ import {Observable} from "rxjs";
 export class HeaderComponent {
   nome = 'Eitor Roberto';
   sidebarIsActive: boolean = true;
+  @Output() menuEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private appService: AppService) {
     this.appService.dadosCompartilhados$.subscribe(
@@ -35,8 +36,8 @@ export class HeaderComponent {
   }
 
   toggleSidebar() {
-
-    this.appService.sidebarShow()
+    this.sidebarIsActive = !this.sidebarIsActive;
+    this.menuEvent.emit(this.sidebarIsActive);
 
   }
 }

@@ -5,7 +5,7 @@ import {BehaviorSubject, Subject} from "rxjs";
   providedIn: 'root'
 })
 export class AppService {
-  sidebarIsActive: Subject<boolean> = new Subject<boolean>();
+  sidebarIsActive: Subject<boolean> = new Subject();
   dadosCompartilhados$ = this.sidebarIsActive.asObservable();
 
   constructor() {

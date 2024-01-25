@@ -1,9 +1,10 @@
 @import "themes";
 
-
 header {
   background: $gradient-header;
-  box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 3px 6px rgba(96, 97, 112, 0.08);
+  box-shadow:
+    0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 3px 6px rgba(96, 97, 112, 0.08);
   min-height: 88px;
   display: flex;
   align-items: center;
@@ -20,7 +21,6 @@ header {
       height: 30px;
       background: transparent;
       border: none;
-
 
       .icon {
         width: 24px;
@@ -40,7 +40,6 @@ header {
       width: 82px;
       height: 39px;
     }
-
   }
 
   nav {
@@ -65,9 +64,9 @@ header {
 
       .icon {
         padding-inline: 10px;
+        cursor: pointer;
 
         ::ng-deep {
-
           svg {
             width: 20px !important;
             height: 20px !important;
@@ -84,8 +83,8 @@ header {
         font-size: 14px;
         font-weight: 400;
         color: $gray-600;
+        outline: none;
       }
-
     }
 
     .nav-items {
@@ -125,7 +124,6 @@ header {
             }
           }
         }
-
 
         &:hover {
           color: $gray-500;
