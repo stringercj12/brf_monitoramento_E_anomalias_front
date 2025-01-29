@@ -5,7 +5,6 @@
   gap: 10px;
 
   cursor: pointer;
-  transition: all .3s ease-in-out;
 
   border-radius: 24px;
 
@@ -41,10 +40,13 @@
   &.btn-link {
     font-size: 14px;
     font-weight: 700;
+    padding: 0;
+    color: $primary-400;
+    border-radius: 0;
+
 
     &:hover {
-      color: $primary-500;
-      text-decoration: 1px solid $primary-500;
+      border-bottom: 1px solid $primary-400;
     }
   }
 

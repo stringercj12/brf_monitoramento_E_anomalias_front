@@ -10,42 +10,42 @@
 <div>
   <h1>Monitoramento</h1>
   @if (viagens.length > 0) {
-    <h6>{{ viagens.length }} veículos em viagem</h6>
+  <h6>{{ viagens.length }} veículos em viagem</h6>
   } @else {
-    <h6>Nenhuma viagem</h6>
+  <h6>Nenhuma viagem</h6>
   }
 </div>
 
 
 <div class="filters">
   <button class="filter">
-    <app-icon icon="filter-1"/>
+    <app-icon icon="filter-1" />
     <div>Filtro</div>
-    <app-icon icon="arrow-down"/>
+    <app-icon icon="arrow-down" />
   </button>
   <button class="filter">
-    <app-icon icon="star"/>
+    <app-icon icon="star" />
     <div>
       Meus filtros
       <span class="filter-count">
-    (1)
-  </span>
+        (1)
+      </span>
     </div>
-    <app-icon icon="arrow-down"/>
+    <app-icon icon="arrow-down" />
   </button>
 </div>
 
 <div class="scheduled-trips">
   <div class="scheduled-trip">
     <div class="count">
-      <app-icon icon="notes-star-1"/>
+      <app-icon icon="notes-star-1" />
       <span>100</span>
     </div>
     <span>Viagens programadas</span>
   </div>
   <div class="scheduled-trip delayed-scheduled-trip">
     <div class="count">
-      <app-icon icon="notes-close"/>
+      <app-icon icon="notes-close" />
       <span>18</span>
     </div>
     <span>Viagens em atraso</span>
@@ -54,88 +54,6 @@
 
 
 <div class="monitoring">
-  <div class="monitoring-content monitoring-content-header">
-    <div class="monitoring-content-item"><strong>Anomalias</strong></div>
-    <div class="monitoring-content-item"><strong>Viagem</strong></div>
-    <div class="monitoring-content-item"><strong>Tipo de operação</strong></div>
-    <div class="monitoring-content-item"><strong>Placa</strong></div>
-    <div class="monitoring-content-item"><strong>Transportadora</strong></div>
-    <div class="monitoring-content-item"><strong>Etapas</strong></div>
-    <div class="monitoring-content-item"><strong>Temperatura</strong></div>
-    <div class="monitoring-content-item"><strong>Rastreador</strong></div>
-    <div class="monitoring-content-item"><strong>GPRS</strong></div>
-    <div class="monitoring-content-item"><strong>Mapa sinótico</strong></div>
-  </div>
 
-  <div class="monitoring-content">
-    <div class="monitoring-content-item">
-      <div class="anomalies">
-        1
-      </div>
-    </div>
-    <div class="monitoring-content-item">
-      <div class="travel">
-        <span>2030919</span>
-        <span class="time-of-travel">+1h10min</span>
-      </div>
-    </div>
-    <div class="monitoring-content-item">
-      Distribuição
-    </div>
-
-    <div class="monitoring-content-item">
-      ARF2283
-    </div>
-    <div class="monitoring-content-item">
-      KP TRANSPORTS
-    </div>
-    <div class="monitoring-content-item">
-      <div class="steps">
-        <span class="step"></span>
-        <span class="step-count">
-          5/12
-        </span>
-      </div>
-    </div>
-
-    <div class="monitoring-content-item">
-
-      <div class="temperature">
-        <app-icon icon="temperature"/>
-        <div>
-          <div class="temperature-count">
-            -10
-          </div>
-          <small>-14º a -20º</small>
-        </div>
-      </div>
-      Eficiência <strong>65%</strong>
-    </div>
-
-    <div class="monitoring-content-item">
-      <app-icon icon="tracker"/>
-      90%
-    </div>
-    <div class="monitoring-content-item">
-      <app-icon icon="signal"/>
-    </div>
-    <div class="monitoring-content-item">
-      <app-icon icon="supply"/>
-      <app-icon icon="shop"/>
-      <app-icon icon="wharehouse"/>
-      <!-- <app-icon icon="end"/>
-      <app-icon icon="cd"/>
-      <app-icon icon="vehicle"/>
-      <app-icon icon="play"/>
-      <app-icon icon="port"/>
-      <app-icon icon="calendar"/>
-      <app-icon icon="delete"/>
-      <app-icon icon="pencil"/>
-      <app-icon icon="operation-2"/> -->
-    </div>
-  </div>
-  <div class="monitoring-content">2
-  </div>
-  <div class="monitoring-content">3
-  </div>
+  <app-monitoring-card />
 </div>

@@ -1,9 +1,11 @@
 <div class="app">
   <app-header (menuEvent)="sidebarActive = $event" />
 
-  <app-sidebar [sidebarActive]="sidebarActive" />
   <div class="content">
-    <router-outlet />
+    <app-sidebar [sidebarActive]="sidebarActive" />
+    <div class="content-wrap">
+      <router-outlet />
+    </div>
   </div>
 
 </div>

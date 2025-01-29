@@ -19,6 +19,7 @@ section {
       align-items: center;
       border-left: 4px solid transparent;
       cursor: pointer;
+
       .icon {
         padding: 18px;
       }
@@ -30,15 +31,29 @@ section {
         display: none;
         padding: 24px 8px;
         flex: 1;
+        align-items: center;
+        justify-content: space-between;
+
+        .sub-icon {
+          margin-right: 8px;
+
+          &::ng-deep {
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
       }
 
       &.active,
       &:hover {
         border-left-color: $primary-500;
         background-color: $primary-200;
+
         .text {
           color: $primary-500;
-          font-weight: 600;
+          font-weight: 500;
         }
       }
 

@@ -1,7 +1,7 @@
 <main>
   <div class="box">
     <div class="logo-container">
-      <img src="/assets/images/logo.png" alt="Logo" class="logo"/>
+      <img src="/assets/images/logo.png" alt="Logo" class="logo" />
     </div>
 
 
@@ -10,13 +10,18 @@
     </h5>
 
     <p>
-      Parece que a URL informada é inválida ou não foi encontrada. <br/>
+      Parece que a URL informada é inválida ou não foi encontrada. <br />
       Tente novamente, informando uma URL válida.
     </p>
 
-    <a routerLink="/" class="back">
-      Voltar para login
-    </a>
+    <div class="box-links">
+      <a  (click)="goBack()" >
+        Voltar para página anterior
+      </a>
+      <a routerLink="/" >
+        Voltar para login
+      </a>
+    </div>
 
   </div>
 </main>

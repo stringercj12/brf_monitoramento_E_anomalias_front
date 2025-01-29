@@ -1,21 +1,29 @@
 <section [ngClass]="{'show': sidebarActive}">
   <nav>
-    <div class="nav-itens" routerLink="dashboard/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <div class="nav-itens" routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <div class="icon">
-        <app-icon icon="home"/>
+        <app-icon icon="home" />
       </div>
       <div class="text">
         Home
       </div>
     </div>
-    <div class="nav-itens" routerLink="monitoring" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    @for (item of menu; track $index) {
+    <div class="nav-itens" [routerLink]="item.route" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
       <div class="icon">
-        <app-icon icon="monitoramento"/>
+        <app-icon [icon]="item.icon" />
       </div>
       <div class="text">
-        Monitoramento
+        {{item.title}}
+        
+        @if(item.subMenu){
+          <div class="sub-icon">
+            <app-icon icon="arrow-down" />
+          </div>
+        }
       </div>
     </div>
+    }
   </nav>
 </section>
-

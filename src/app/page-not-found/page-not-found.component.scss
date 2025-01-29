@@ -31,6 +31,30 @@ main {
         height: 58px;
       }
     }
+
+    .box-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+
+      a {
+        font-size: 14px;
+        color: $primary-400;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          text-decoration: 1px solid $primary-400;
+          border-bottom: 1px solid $primary-400;
+        }
+      }
+
+    }
   }
 }
 

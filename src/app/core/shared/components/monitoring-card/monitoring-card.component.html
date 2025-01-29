@@ -1,0 +1,104 @@
+<div class="monitoring-table">
+  <div class="monitoring-table-header">
+    <div class="monitoring-table-header-item">Anomalias</div>
+    <div class="monitoring-table-header-item">Viagem</div>
+    <div class="monitoring-table-header-item">Tipo de operação</div>
+    <div class="monitoring-table-header-item">Placa</div>
+    <div class="monitoring-table-header-item">Transportadora</div>
+    <div class="monitoring-table-header-item">Etapas</div>
+    <div class="monitoring-table-header-item">Temperatura</div>
+    <div class="monitoring-table-header-item">Rastreador</div>
+    <div class="monitoring-table-header-item">GPRS</div>
+    <div class="monitoring-table-header-item">Mapa sinótico</div>
+  </div>
+
+  @for (item of [0,1,2,3,4]; track $index) {
+  <div class="monitoring-table-content">
+    <div class="monitoring-table-content-items">
+      <div class="monitoring-table-content-item">
+        <div class="anomalies">
+          1
+        </div>
+      </div>
+      <div class="monitoring-table-content-item">
+        <div class="travel">
+          <span>2030919</span>
+          <span class="time-of-travel">+1h10min</span>
+        </div>
+      </div>
+      <div class="monitoring-table-content-item">
+        Distribuição
+      </div>
+
+      <div class="monitoring-table-content-item">
+        ARF2283
+      </div>
+      <div class="monitoring-table-content-item">
+        KP TRANSPORTS
+      </div>
+      <div class="monitoring-table-content-item">
+        <div class="steps">
+          <span class="step"></span>
+          <span class="step-count">
+            5/12
+          </span>
+        </div>
+      </div>
+
+      <div class="monitoring-table-content-item">
+
+        <div class="temperature">
+          <app-icon icon="temperature" />
+          <div>
+            <div class="temperature-count">
+              -10
+            </div>
+            <small>-14º a -20º</small>
+          </div>
+        </div>
+        Eficiência <strong>65%</strong>
+      </div>
+
+      <div class="monitoring-table-content-item">
+        <app-icon icon="tracker" />
+        90%
+      </div>
+      <div class="monitoring-table-content-item">
+        <app-icon icon="signal" />
+      </div>
+      <div class="monitoring-table-content-item">
+        <div class="actions">
+          <div class="mapa">
+            <app-icon icon="supply" />
+            <app-icon icon="shop" />
+            <app-icon icon="warehouse" />
+            <!-- <app-icon icon="end" />
+          <app-icon icon="cd" />
+          <app-icon icon="vehicle" />
+          <app-icon icon="play" />
+          <app-icon icon="port" />
+          <app-icon icon="calendar" />
+          <app-icon icon="delete" />
+          <app-icon icon="pencil" />
+          <app-icon icon="operation-2" /> -->
+          </div>
+
+          <button type="button" class="expand" [class.is-expanded]="isExpanded" (click)="toggleExpand()">
+            <app-icon icon="arrow-down" />
+          </button>
+        </div>
+      </div>
+    </div>
+    @if(isExpanded){
+    <div class="monitoring-table-content-timeline" [class.open]="isExpanded">
+      <app-timeline [steps]="steps"></app-timeline>
+    </div>
+
+
+    <button class="btn btn-link text-blue">
+      Detalhes da viagem
+    </button>
+    }
+  </div>
+  }
+</div>
